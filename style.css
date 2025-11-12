@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 1.2em;
+  min-height: 100vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+}
+
+#AddBook {
+  padding: 0.8em 1.4em;
+  border: none;
+  border-radius: 0.4em;
+}
+
+form input {
+  padding: 0.8em;
+  border: none;
+  background-color: aliceblue;
+  border-radius: 0.4em;
+}
+
+.display-box {
+  padding: 0.8em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2em;
+  background-color: azure;
+}
+
+.display-box div {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.read-status {
+  margin-right: 10px;
+}
+.remove-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}

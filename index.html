@@ -7,7 +7,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div></div>
+    <form>
+      <label>
+        Book title:
+        <input type="text" name="title" required />
+      </label>
+      <label>
+        Book Author:
+        <input type="text" name="author" required />
+      </label>
+      <label>
+        Number of Pages:
+        <input type="number" name="pages" required />
+      </label>
+      <label>
+        Have you read the book? <br />
+        <label for="Yread">
+          yes
+          <input type="radio" value="yes" name="read" id="Yread" />
+        </label>
+        <label for="Nread">
+          no
+          <input type="radio" value="no" name="read" id="Nread" required />
+        </label>
+      </label>
+      <div>
+        <button id="AddBook" type="submit">Add Book</button>
+      </div>
+    </form>
     <div class="display-box"></div>
     <script src="script.js"></script>
   </body>
