@@ -35,7 +35,9 @@ function display() {
     const readStatus = document.createElement("button");
     const removeButton = document.createElement("button");
 
-    const readValue = book.readStatus;
+    bookBox.dataset.id = book.id;
+
+    const readValue = book.readStatus();
     readStatus.innerText =
       readValue === "have read" ? "not read yet" : "have read";
     readStatus.classList.add("read-status");
@@ -53,8 +55,11 @@ function display() {
     displayBox.append(bookBox);
 
     removeButton.addEventListener("click", (e) => {
-      const x = e.target;
-      displayBox.removeChild(x.parentNode);
+      const bookCard = e.target.parentNode;
+      const bookId = bookCard.dataset.id;
+      const index = myLibrary.findIndex((b) => b.id === bookId);
+      myLibrary.splice(index, 1);
+      display();
     });
   });
 }
